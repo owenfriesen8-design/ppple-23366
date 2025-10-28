@@ -20,7 +20,7 @@ const Index = () => {
       rewardProgressTitle: "",
       quickStartTitle: "",
       steps: [
-        { title: "Complete Survey & Enter Info", subtitle: "Takes 2-3 minutes. Answer simple questions and provide your email to get started." },
+        { title: "Sign Up & Claim $5 Bonus", subtitle: "Create your free account and instantly receive a $5 welcome bonus to get started." },
         { title: "Finish Deals & Offers", subtitle: "Choose from 100+ available offers. Complete 2-3 offers that interest you." },
         { title: "Claim Your Cash", subtitle: "Money arrives within 24h. Get paid fast and easy!" },
       ],
@@ -37,7 +37,7 @@ const Index = () => {
       rewardProgressTitle: "",
       quickStartTitle: "",
       steps: [
-        { title: "Umfrage ausfüllen & Daten eingeben", subtitle: "Dauert 2-3 Minuten. Beantworte einfache Fragen und gib deine E-Mail ein, um zu beginnen." },
+        { title: "Registrieren & $5 Bonus sichern", subtitle: "Erstelle dein kostenloses Konto und erhalte sofort einen $5 Willkommensbonus." },
         { title: "Angebote abschließen", subtitle: "Wähle aus über 100 verfügbaren Angeboten. Schließe 2-3 Angebote ab, die dich interessieren." },
         { title: "Fordere dein Geld an", subtitle: "Geld kommt innerhalb von 24 Std. an. Schnell und einfach ausgezahlt!" },
       ],
