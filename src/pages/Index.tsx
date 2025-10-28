@@ -24,7 +24,7 @@ const Index = () => {
         { title: "Finish Deals & Offers", subtitle: "Choose from 100+ available offers. Complete 2-3 offers that interest you." },
         { title: "Claim Your Cash", subtitle: "Money arrives within 24h. Get paid fast and easy!" },
       ],
-      cta: "Claim My Reward Now",
+      cta: "Start Earning Now",
       socialProof: "Join thousands earning extra cash daily",
       securityBadge: "Secure & Private",
       tapInstall: "Click below to get started",
@@ -41,7 +41,7 @@ const Index = () => {
         { title: "Angebote abschließen", subtitle: "Wähle aus über 100 verfügbaren Angeboten. Schließe 2-3 Angebote ab, die dich interessieren." },
         { title: "Fordere dein Geld an", subtitle: "Geld kommt innerhalb von 24 Std. an. Schnell und einfach ausgezahlt!" },
       ],
-      cta: "Jetzt Belohnung holen",
+      cta: "Jetzt Verdienen",
       socialProof: "Tausende verdienen täglich extra Geld",
       securityBadge: "Sicher & Privat",
       tapInstall: "Klicke unten, um zu beginnen",
@@ -52,10 +52,7 @@ const Index = () => {
   const t = isGerman ? translations.de : translations.en;
 
   const handleCTAClick = () => {
-    const url = isCanadian 
-      ? 'https://glitchy.go2cloud.org/aff_c?offer_id=3446&aff_id=23027'
-      : 'https://uplevelrewarded.com/aff_c?offer_id=1600&aff_id=23027';
-    window.open(url, '_blank');
+    window.open('https://uplevelrewarded.com/aff_c?offer_id=3259&aff_id=23027', '_blank');
   };
 
   useEffect(() => {
