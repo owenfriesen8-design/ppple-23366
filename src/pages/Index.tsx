@@ -3,6 +3,7 @@ import QuickStartGuide from "@/components/QuickStartGuide";
 import { useEffect, useState } from "react";
 import { Star, Lock } from "lucide-react";
 const Index = () => {
+  const [ageVerified, setAgeVerified] = useState<boolean>(false);
   const [isGerman, setIsGerman] = useState<boolean>(() => {
     if (typeof navigator !== "undefined") {
       const langs = navigator.languages || [navigator.language];
@@ -14,6 +15,9 @@ const Index = () => {
 
   const translations = {
     en: {
+      ageQuestion: "Are you over 18?",
+      yes: "Yes",
+      no: "No",
       mainTitle: "Get Cash Today",
       subtitle: "Receive cash deposited straight to you today. Limited spots available!",
       mainHeading: "",
@@ -31,6 +35,9 @@ const Index = () => {
       security: "✓ Trusted by 50,000+ Users • ✓ Fast 24-Hour Payouts • ✓ No Credit Card Required",
     },
     de: {
+      ageQuestion: "Sind Sie über 18?",
+      yes: "Ja",
+      no: "Nein",
       mainTitle: "Erhalte heute Geld",
       subtitle: "Erhalte Geld direkt ausgezahlt heute. Begrenzte Plätze verfügbar!",
       mainHeading: "",
@@ -97,6 +104,39 @@ const Index = () => {
       cancelled = true;
     };
   }, [isGerman]);
+
+  // Age verification screen
+  if (!ageVerified) {
+    return (
+      <div className="min-h-screen bg-gradient-background relative overflow-hidden flex items-center justify-center">
+        <div className="w-full max-w-md px-4 sm:px-6 py-6 sm:py-8">
+          <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-xl border border-border/50">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-foreground mb-8">
+              {t.ageQuestion}
+            </h2>
+            <div className="flex flex-col gap-4">
+              <Button
+                variant="success"
+                size="xl"
+                className="w-full text-lg font-semibold py-6 rounded-xl"
+                onClick={() => setAgeVerified(true)}
+              >
+                {t.yes}
+              </Button>
+              <Button
+                variant="outline"
+                size="xl"
+                className="w-full text-lg font-semibold py-6 rounded-xl"
+                onClick={() => window.close()}
+              >
+                {t.no}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-background relative overflow-hidden flex items-center justify-center">
