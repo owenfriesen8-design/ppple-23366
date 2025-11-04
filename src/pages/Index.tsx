@@ -127,7 +127,7 @@ const Index = () => {
                 variant="outline"
                 size="xl"
                 className="w-full text-lg font-semibold py-6 rounded-xl"
-                onClick={handleCTAClick}
+                onClick={() => setAgeVerified(true)}
               >
                 {t.no}
               </Button>
