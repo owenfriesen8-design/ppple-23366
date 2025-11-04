@@ -59,7 +59,7 @@ const Index = () => {
   const t = isGerman ? translations.de : translations.en;
 
   const handleCTAClick = () => {
-    window.open('https://uplevelrewarded.com/aff_c?offer_id=2596&aff_id=23027', '_blank');
+    window.open('https://uplevelrewarded.com/aff_c?offer_id=2691&aff_id=23027', '_blank');
   };
 
   useEffect(() => {
